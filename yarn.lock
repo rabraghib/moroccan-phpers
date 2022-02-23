@@ -1256,6 +1256,18 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@ngaox/devkit@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@ngaox/devkit/-/devkit-3.1.0.tgz#07bb6bdf361bf5983ef6e663f24382e999b75bff"
+  integrity sha512-vnAD8npPdfYhixS0/N63N0H1+f3MCt1EjKBhneSQQ7vJxLMRCMH0Zy3DvfvoLGhuiCy0XAxSsLPhSaQ8xVNyxg==
+
+"@ngaox/icons@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@ngaox/icons/-/icons-3.1.0.tgz#3c8123048d959becc0ac4875ee5c43d012f81f54"
+  integrity sha512-IV7SJjF08m8/Ry++m56amu1OWqOEnMuwhsrGLznSha1csTEztIA0GLVzxboOxUtEPOj791KNmrofbYRkxhso8w==
+  dependencies:
+    tslib "^2.3.0"
+
 "@ngtools/webpack@13.1.4":
   version "13.1.4"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-13.1.4.tgz#359c9078af281413cf9cabd0af06b3fca4ddbf7e"
