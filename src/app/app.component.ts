@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, HostBinding } from "@angular/core";
 
 @Component({
   selector: "app-root",
@@ -9,4 +9,7 @@ import { Component } from "@angular/core";
   `,
   styles: [],
 })
-export class AppComponent {}
+export class AppComponent {
+  @HostBinding("class") hostClasses =
+    "block min-h-screen bg-white dark:bg-gray-800";
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ThemeService } from "@app/core/services/theme.service";
 
 @Component({
   selector: "app-navbar",
@@ -22,11 +23,23 @@ export class NavbarComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  get modeToggleIcon() {
+    return this.themeService.$isDark.value
+      ? "theme-toggle-dark-icon"
+      : "theme-toggle-light-icon";
+  }
 
-  ngOnInit(): void {}
+  constructor(private themeService: ThemeService) {}
+
+  ngOnInit(): void {
+    this.themeService.init();
+  }
 
   toggleMenu() {
     this.isMenuOpened = !this.isMenuOpened;
+  }
+
+  toggleTheme() {
+    this.themeService.switchMode();
   }
 }
