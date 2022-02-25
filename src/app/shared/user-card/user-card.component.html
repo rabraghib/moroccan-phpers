@@ -1,0 +1,16 @@
+<img
+  class="object-cover w-full h-64 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+  [src]="user.avatar"
+  [alt]="user.name + '\'s avatar'"
+/>
+<div class="flex flex-col justify-between p-4 leading-normal">
+  <h5
+    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+  >
+    {{ user.name }}
+  </h5>
+  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+    {{ user.bio }}
+  </p>
+  <app-social-links [links]="user.links" class="justify-end"></app-social-links>
+</div>

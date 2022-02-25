@@ -1,0 +1,8 @@
+<a
+  [title]="link.name"
+  *ngFor="let link of links"
+  [href]="link.url"
+  class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+>
+  <ngaox-icon class="w-5 h-5" [name]="link.icon"></ngaox-icon>
+</a>

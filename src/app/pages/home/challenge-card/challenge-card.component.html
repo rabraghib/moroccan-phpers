@@ -1,0 +1,17 @@
+<a
+  [routerLink]="['/challenges', challenge.slug]"
+  class="block p-6 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+>
+  <ngaox-icon
+    [name]="challenge.icon"
+    class="w-16 h-16 mb-2 text-blue-600"
+  ></ngaox-icon>
+  <h5
+    class="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+  >
+    {{ challenge.name }}
+  </h5>
+  <p class="font-normal text-gray-700 dark:text-gray-400">
+    {{ challenge.description }}
+  </p>
+</a>

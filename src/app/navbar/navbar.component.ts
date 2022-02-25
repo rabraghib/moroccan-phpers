@@ -13,10 +13,6 @@ export class NavbarComponent implements OnInit {
       url: "/challenges",
     },
     {
-      name: "Submissions",
-      url: "/submissions",
-    },
-    {
       name: "Leaderboard",
       url: "/leaderboard",
     },

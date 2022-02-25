@@ -1,21 +1,18 @@
 <nav
-  class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800"
+  class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800 sticky top-0 z-50"
 >
   <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a class="flex" routerLink="/">
       <ngaox-icon class="mr-3 h-10" name="moroccan-phpers"></ngaox-icon>
       <span
-        class="self-center text-lg font-semibold whitespace-nowrap dark:text-white"
+        class="hidden sm:inline self-center text-lg font-semibold whitespace-nowrap dark:text-white"
         >Moroccan PHPers</span
       >
     </a>
     <div class="flex md:order-2">
-      <button
-        type="button"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
-        Join challenge!
-      </button>
+      <app-button variant="primary" routerLink="/challenge/PHPers">
+        PHPers Challenge!
+      </app-button>
       <button
         (click)="toggleMenu()"
         class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
