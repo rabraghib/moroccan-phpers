@@ -8,7 +8,7 @@ import { COMMUNITY } from "src/app/core/data";
 })
 export class HomeComponent implements OnInit {
   @HostBinding("class") HostClasses = "block mx-auto container px-4 sm:px-6";
-  challenges = COMMUNITY.challenges;
+  challenges = COMMUNITY.challenges.slice(0, 2);
   moderators = COMMUNITY.moderators;
 
   constructor() {}
