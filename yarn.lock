@@ -1216,15 +1216,15 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@ngaox/devkit@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@ngaox/devkit/-/devkit-3.1.0.tgz#07bb6bdf361bf5983ef6e663f24382e999b75bff"
-  integrity sha512-vnAD8npPdfYhixS0/N63N0H1+f3MCt1EjKBhneSQQ7vJxLMRCMH0Zy3DvfvoLGhuiCy0XAxSsLPhSaQ8xVNyxg==
+"@ngaox/devkit@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@ngaox/devkit/-/devkit-3.1.2.tgz#3723132c8bf53e4efb6b9d25b4a08ddcc7150ce3"
+  integrity sha512-RV88UYaor/0OnooSTjK7n7z5o92cI2ndHfe6S4OYXjcpVxrQXZcV7o0ZLuUIRqm1NUU2nenjpz0ST44CPtWLrA==
 
-"@ngaox/icons@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@ngaox/icons/-/icons-3.1.0.tgz#3c8123048d959becc0ac4875ee5c43d012f81f54"
-  integrity sha512-IV7SJjF08m8/Ry++m56amu1OWqOEnMuwhsrGLznSha1csTEztIA0GLVzxboOxUtEPOj791KNmrofbYRkxhso8w==
+"@ngaox/icons@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@ngaox/icons/-/icons-3.1.2.tgz#bd179a3bb0c7e5bed9818190b7537a15964ea2a9"
+  integrity sha512-KxvJBRigdp+lfUzFNHLkFS92uNopwfYqizFr0J4zwe8PiXwKJ8isN8cxSjN4IaYR6oIghsPT9l8T558Ho5vNGw==
   dependencies:
     tslib "^2.3.0"
 
@@ -4853,7 +4853,7 @@ postcss@8.4.5:
     picocolors "^1.0.0"
     source-map-js "^1.0.1"
 
-postcss@^8.2.14:
+postcss@^8.2.14, postcss@^8.4.6:
   version "8.4.7"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.7.tgz#f99862069ec4541de386bf57f5660a6c7a0875a8"
   integrity sha512-L9Ye3r6hkkCeOETQX6iOaWZgjp3LL6Lpqm6EtgbKrgqGGteRMNb9vzBfRL96YOSu8o7x3MfIH9Mo5cPJFGrW6A==
@@ -4862,7 +4862,7 @@ postcss@^8.2.14:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-postcss@^8.2.15, postcss@^8.3.7, postcss@^8.4.6:
+postcss@^8.2.15, postcss@^8.3.7:
   version "8.4.6"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.6.tgz#c5ff3c3c457a23864f32cb45ac9b741498a09ae1"
   integrity sha512-OovjwIzs9Te46vlEx7+uXB0PLijpwjXGKXjVGGPIGubGpq7uh5Xgf6D6FiJ/SzJMBosHDp6a2hiXOS97iBXcaA==
@@ -5153,19 +5153,12 @@ rxjs@6.6.7:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^7.2.0:
+rxjs@^7.2.0, rxjs@~7.5.0:
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.4.tgz#3d6bd407e6b7ce9a123e76b1e770dc5761aa368d"
   integrity sha512-h5M3Hk78r6wAheJF0a5YahB1yRQKCsZ4MsGdZ5O9ETbVtjPcScGfrMmoOq7EBsCRzd4BDkvDJ7ogP8Sz5tTFiQ==
   dependencies:
     tslib "^2.1.0"
-
-rxjs@~7.4.0:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.4.0.tgz#a12a44d7eebf016f5ff2441b87f28c9a51cebc68"
-  integrity sha512-7SQDi7xeTMCJpqViXh8gL/lebcwlp3d831F05+9B44A4B0WfsEwUQHR64gsH1kvJ+Ep/J9K2+n1hVl1CsGN23w==
-  dependencies:
-    tslib "~2.1.0"
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
@@ -5706,11 +5699,6 @@ tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
-
-tslib@~2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
-  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
 type-fest@^0.21.3:
   version "0.21.3"
