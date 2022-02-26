@@ -1217,14 +1217,14 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@ngaox/devkit@^3.1.2":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@ngaox/devkit/-/devkit-3.1.2.tgz#3723132c8bf53e4efb6b9d25b4a08ddcc7150ce3"
-  integrity sha512-RV88UYaor/0OnooSTjK7n7z5o92cI2ndHfe6S4OYXjcpVxrQXZcV7o0ZLuUIRqm1NUU2nenjpz0ST44CPtWLrA==
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@ngaox/devkit/-/devkit-3.1.3.tgz#112ae8712813460b7500e58c384497b3d3472e03"
+  integrity sha512-vD7uK7NZ95qHvwK0HIk06DBF/+/EZiUuLf1nUENDOGWoyDgb/eZoAUBAwPerWSiar+fr0U2GiRSKWu63MA3zvQ==
 
 "@ngaox/icons@^3.1.2":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@ngaox/icons/-/icons-3.1.2.tgz#bd179a3bb0c7e5bed9818190b7537a15964ea2a9"
-  integrity sha512-KxvJBRigdp+lfUzFNHLkFS92uNopwfYqizFr0J4zwe8PiXwKJ8isN8cxSjN4IaYR6oIghsPT9l8T558Ho5vNGw==
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@ngaox/icons/-/icons-3.1.3.tgz#49c924b3bc7c84e888f4240284300ff38868da06"
+  integrity sha512-a47kP3L8TJFm7m0VNWGgTLyXibr2jdXVbHoN9aJ8vLnvOudYKJY2Jk+jYv9xJ5ej3W48HJ6bYMfwysPDfYBTWA==
   dependencies:
     tslib "^2.3.0"
 
