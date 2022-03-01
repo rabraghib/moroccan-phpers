@@ -1,0 +1,11 @@
+<app-section
+  title="Explore challenges"
+  description="Take a look at our curated list of challenges to learn more about PHP and PHP development."
+>
+  <div class="text-center grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+    <app-challenge-card
+      [challenge]="challenge"
+      *ngFor="let challenge of challenges"
+    ></app-challenge-card>
+  </div>
+</app-section>

@@ -34,18 +34,18 @@ export const COMMUNITY: ICommunity = {
         },
         {
           name: "Facebook",
-          url: "https://www.facebook.com/groups/moroccan.phpers/",
+          url: "https://www.facebook.com/rabraghib",
           icon: "facebook",
-        },
-        {
-          name: "Github",
-          url: "https://github.com/moroccan-phpers",
-          icon: "github",
         },
         {
           name: "Twitter",
           url: "https://twitter.com/rabraghib",
           icon: "twitter",
+        },
+        {
+          name: "Instagram",
+          url: "https://instagram.com/rabraghib",
+          icon: "instagram",
         },
       ],
     },
@@ -81,20 +81,35 @@ export const COMMUNITY: ICommunity = {
   ],
   challenges: [
     {
-      name: "PHPers Challenge",
-      icon: "github",
-      slug: "PHPers",
-      description:
+      name: "PHPers Champion",
+      icon: "power-first",
+      slug: "phpers-champion",
+      summary:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam unde similique natus amet? Cum at mollitia impedit. Praesentium, laboriosam quo.",
+      nextEditionDate: "2022-04-01",
       editions: [],
     },
     {
-      name: "Lorem Challenge",
-      icon: "instagram",
-      slug: "test",
-      description:
+      name: "File parser",
+      icon: "parse-file",
+      slug: "file-parser",
+      summary:
+        "Evaluate/review a freshmen implementation of a file parser (parse the content of a file to a php array) and re-implement it in a more efficient way",
+      date: "2020-01-01",
+      duration: "1 week",
+      description: "",
+      solutions: [],
+    },
+    {
+      name: "PHP code tester",
+      icon: "test-tube",
+      slug: "php-code-tester",
+      summary:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam unde similique natus amet? Cum at mollitia impedit. Praesentium, laboriosam quo.",
-      editions: [],
+      date: "2020-01-01",
+      duration: "1 week",
+      description: "",
+      solutions: [],
     },
   ],
 };

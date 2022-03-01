@@ -19,12 +19,29 @@ export interface ISocialLink {
   icon: string;
 }
 
-export interface IChallenge {
+export type IChallenge = ISingleChallenge | IPeriodicChallenge;
+
+export type ISingleChallenge = IChallengeBase & IEdition;
+export type IPeriodicChallenge = IChallengeBase & {
+  nextEditionDate?: string;
+  editions: IEdition[];
+};
+
+export interface IEdition {
+  date: string;
+  duration: string;
+  description: string;
+  solutions: ISolution[];
+}
+
+export interface ISolution {
+  author: IUser;
+  url: string;
+}
+
+interface IChallengeBase {
   name: string;
   icon: string;
   slug: string;
-  description: string;
-  editions: IEdition[];
+  summary: string;
 }
-
-export interface IEdition {}
