@@ -4,7 +4,9 @@ import { Component, HostBinding } from "@angular/core";
   selector: "app-root",
   template: `
     <app-navbar></app-navbar>
-    <router-outlet></router-outlet>
+    <div class="block mx-auto container px-4 sm:px-6">
+      <router-outlet></router-outlet>
+    </div>
     <app-footer></app-footer>
   `,
   styles: [],
