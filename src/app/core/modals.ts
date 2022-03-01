@@ -1,6 +1,7 @@
 export interface ICommunity {
   name: string;
   description: string;
+  PHPers: IPHPer[];
   socials: ISocialLink[];
   challenges: IChallenge[];
   moderators: IUser[];
@@ -12,6 +13,11 @@ export interface IUser {
   bio?: string;
   links: ISocialLink[];
 }
+
+export type IPHPer = IUser & {
+  rank: number;
+  points: number;
+};
 
 export interface ISocialLink {
   name: string;

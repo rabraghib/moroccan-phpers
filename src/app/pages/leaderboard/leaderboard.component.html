@@ -1,1 +1,69 @@
-<p>leaderboard works!</p>
+<app-section
+  title="PHPers Leaderboard"
+  description="Check out how are you doing compared to other PHPers!"
+>
+  <div class="shadow-md sm:rounded-lg overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <table class="min-w-full">
+      <thead class="bg-gray-50 dark:bg-gray-700">
+        <tr>
+          <th
+            scope="col"
+            class="w-0 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
+          >
+            Rank
+          </th>
+          <th
+            scope="col"
+            class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
+          >
+            Info
+          </th>
+          <th scope="col" class="p-4 w-1/12">
+            <span class="sr-only">Social Links</span>
+          </th>
+          <th
+            scope="col"
+            class="w-1/12 py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
+          >
+            Points
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          *ngFor="let user of users"
+        >
+          <td
+            class="text-center py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400"
+          >
+            #{{ user.rank }}
+          </td>
+          <td
+            class="flex items-center gap-4 py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
+          >
+            <img
+              class="w-14 h-14 rounded-full shadow"
+              [src]="user.avatar"
+              alt="{{ user.name }}'s avatar"
+            />
+            <div class="whitespace-pre-wrap">
+              {{ user.name }} <br />
+              <span class="text-xs text-gray-500 dark:text-gray-400"
+                >{{ user.bio }}
+              </span>
+            </div>
+          </td>
+          <td class="py-4 px-6">
+            <app-social-links [links]="user.links"></app-social-links>
+          </td>
+          <td
+            class="text-center py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400"
+          >
+            {{ user.points }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</app-section>
