@@ -7,7 +7,7 @@ import { COMMUNITY } from "src/app/core/data";
   styles: [``],
 })
 export class HomeComponent implements OnInit {
-  challenges = COMMUNITY.challenges.slice(0, 2);
+  challenges = COMMUNITY.challenges;
   moderators = COMMUNITY.moderators;
 
   constructor() {}

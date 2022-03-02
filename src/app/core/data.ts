@@ -5,27 +5,39 @@ export const COMMUNITY: ICommunity = {
   description:
     "We are a group of PHP developers and enthusiasts who aim at sharing our knowledge and encourage PHP development in Morocco. Accelerate your career and skills by participating in our meetups, workshops,talks, challenges, and more...!",
   PHPers: [
-    {
-      name: "John Doe",
-      avatar: "https://i.pravatar.cc/300",
-      bio: "John Doe is a cool guy",
-      rank: 1,
-      points: 100,
-      links: [
-        {
-          name: "Github",
-          url: "https://github.com/rabraghib",
-          icon: "github",
-        },
-        {
-          name: "Twitter",
-          url: "https://twitter.com/rabraghib",
-          icon: "twitter",
-        },
-      ],
-    },
+    ...[1, 2, 3, 4].map((i) => {
+      return {
+        name: "John Doe",
+        avatar: `https://i.pravatar.cc/300?id=${i}`,
+        bio: "John Doe is a cool guy",
+        rank: 1,
+        points: 100,
+        links: [
+          {
+            name: "Github",
+            url: "https://github.com/rabraghib",
+            icon: "github",
+          },
+          {
+            name: "Twitter",
+            url: "https://twitter.com/rabraghib",
+            icon: "twitter",
+          },
+          {
+            name: "Github",
+            url: "https://github.com/rabraghib",
+            icon: "github",
+          },
+          {
+            name: "Twitter",
+            url: "https://twitter.com/rabraghib",
+            icon: "twitter",
+          },
+        ],
+      };
+    }),
   ],
-  socials: [
+  links: [
     {
       name: "Facebook",
       url: "https://www.facebook.com/groups/moroccan.phpers/",

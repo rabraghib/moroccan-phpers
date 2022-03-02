@@ -1,4 +1,10 @@
-import { Component, HostBinding, Input, OnInit } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  HostBinding,
+  Input,
+  OnInit,
+} from "@angular/core";
 
 @Component({
   selector: "app-section",
@@ -12,7 +18,7 @@ export class SectionComponent implements OnInit {
   @HostBinding("class")
   HostClasses = `block px-4 sm:px-6 py-12 md:py-20 mx-auto`;
 
-  constructor() {}
+  constructor(public element: ElementRef) {}
 
   ngOnInit(): void {}
 }

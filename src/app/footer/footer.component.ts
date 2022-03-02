@@ -7,7 +7,7 @@ import { COMMUNITY } from "../core/data";
   styles: [],
 })
 export class FooterComponent implements OnInit {
-  socialLinks = COMMUNITY.socials;
+  socialLinks = COMMUNITY.links;
   @HostBinding("class") HostClasses =
     "block p-4 bg-white sm:p-6 dark:bg-gray-800";
 

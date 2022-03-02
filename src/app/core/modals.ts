@@ -2,7 +2,7 @@ export interface ICommunity {
   name: string;
   description: string;
   PHPers: IPHPer[];
-  socials: ISocialLink[];
+  links: ISocialLink[];
   challenges: IChallenge[];
   moderators: IUser[];
 }

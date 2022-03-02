@@ -4,7 +4,7 @@ import { ThemeService } from "@app/core/services/theme.service";
 @Component({
   selector: "app-navbar",
   templateUrl: "./navbar.component.html",
-  styleUrls: ["./navbar.component.scss"],
+  styles: [``],
 })
 export class NavbarComponent implements OnInit {
   isMenuOpened = false;
@@ -33,10 +33,6 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.themeService.init();
-  }
-
-  toggleMenu() {
-    this.isMenuOpened = !this.isMenuOpened;
   }
 
   toggleTheme() {
