@@ -9,6 +9,7 @@ import { COMMUNITY } from "src/app/core/data";
 export class HomeComponent implements OnInit {
   challenges = COMMUNITY.challenges;
   moderators = COMMUNITY.moderators;
+  description = COMMUNITY.description;
 
   constructor() {}
 

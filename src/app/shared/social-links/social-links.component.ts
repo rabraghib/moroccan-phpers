@@ -8,7 +8,7 @@ import { ISocialLink } from "@app/core/modals";
 })
 export class SocialLinksComponent implements OnInit {
   @Input() links: ISocialLink[] = [];
-  @HostBinding("class") hostClasses = "flex mt-4 space-x-4 sm:mt-0";
+  @HostBinding("class") hostClasses = "flex space-x-4";
 
   constructor() {}
 
