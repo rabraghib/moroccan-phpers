@@ -119,7 +119,12 @@ export const COMMUNITY: ICommunity = {
       slug: "phpers-champion",
       summary:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam unde similique natus amet? Cum at mollitia impedit. Praesentium, laboriosam quo.",
-      nextEditionDate: "2022-04-01",
+      next: {
+        title: "April Edition",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam unde similique natus amet? Cum at mollitia impedit.",
+        date: "2022-04-01",
+      },
       editions: [],
     },
     {
@@ -129,7 +134,7 @@ export const COMMUNITY: ICommunity = {
       summary:
         "Evaluate/review a freshmen implementation of a file parser (parse the content of a file to a php array) and re-implement it in a more efficient way",
       date: "2020-01-01",
-      duration: "1 week",
+      duration: "7 hour",
       description: "",
       solutions: [],
     },

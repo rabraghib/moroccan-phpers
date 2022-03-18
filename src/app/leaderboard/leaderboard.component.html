@@ -14,11 +14,11 @@
           </th>
           <th
             scope="col"
-            class="py-3 px-6 min-w-[20rem] text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
+            class="py-3 px-6 min-w-[16rem] text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400"
           >
             Info
           </th>
-          <th scope="col" class="p-4 w-1/12">
+          <th scope="col" class="hidden md:table-cell p-4 w-1/12">
             <span class="sr-only">Social Links</span>
           </th>
           <th
@@ -54,7 +54,7 @@
               </span>
             </div>
           </td>
-          <td class="py-4 px-6">
+          <td class="py-4 px-6 hidden md:table-cell">
             <app-social-links [links]="user.links"></app-social-links>
           </td>
           <td

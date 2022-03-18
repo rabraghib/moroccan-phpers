@@ -29,9 +29,15 @@ export type IChallenge = ISingleChallenge | IPeriodicChallenge;
 
 export type ISingleChallenge = IChallengeBase & IEdition;
 export type IPeriodicChallenge = IChallengeBase & {
-  nextEditionDate?: string;
+  next?: IAnnouncement;
   editions: IEdition[];
 };
+
+export interface IAnnouncement {
+  title: string;
+  description: string;
+  date: string;
+}
 
 export interface IEdition {
   date: string;
