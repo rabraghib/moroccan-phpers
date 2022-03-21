@@ -19,3 +19,4 @@ This repo represents (https://github.com/moroccan-phpers/challenge-1-file-parser
 Your task is to evaluate this implementation and implement it in your way.
 
 - What are your thoughts about? What are the good things? the bad ones?
+- How would you implement it?
