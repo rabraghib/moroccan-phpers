@@ -1,9 +1,5 @@
 import { Component, HostBinding, Input, OnInit } from "@angular/core";
-import {
-  IChallenge,
-  IPeriodicChallenge,
-  ISingleChallenge,
-} from "@app/core/modals";
+import { IChallenge, IPeriodicChallenge, ISingleChallenge } from "@ngaox/press";
 
 @Component({
   selector: "app-challenge-card",
@@ -20,13 +16,13 @@ export class ChallengeCardComponent implements OnInit {
   ngOnInit(): void {}
 
   isSingleChallenge(ch: IChallenge): ISingleChallenge | false {
-    if ("solutions" in ch) {
+    if ("date" in ch) {
       return ch as ISingleChallenge;
     }
     return false;
   }
   isPeriodicChallenge(ch: IChallenge): IPeriodicChallenge | false {
-    if ("solutions" in ch) {
+    if ("date" in ch) {
       return false;
     }
     return ch as IPeriodicChallenge;

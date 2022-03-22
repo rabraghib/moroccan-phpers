@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input, OnInit } from "@angular/core";
-import { IUser } from "@app/core/modals";
+import { IModerator } from "@app/core/modals";
 
 @Component({
   selector: "app-user-card",
@@ -7,7 +7,7 @@ import { IUser } from "@app/core/modals";
   styles: [],
 })
 export class UserCardComponent implements OnInit {
-  @Input() user!: IUser;
+  @Input() user!: IModerator;
   @HostBinding("class") hostClasses =
     "flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row dark:border-gray-700 dark:bg-gray-800";
 

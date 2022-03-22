@@ -1,6 +1,6 @@
 <a
   [title]="link.name"
-  *ngFor="let link of links"
+  *ngFor="let link of links | SocialLinks"
   [href]="link.url"
   class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
 >

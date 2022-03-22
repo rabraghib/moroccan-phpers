@@ -1,6 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { IPHPer } from "@app/core/modals";
-import { COMMUNITY } from "@app/core/data";
 
 @Component({
   selector: "app-leaderboard",
@@ -8,7 +6,20 @@ import { COMMUNITY } from "@app/core/data";
   styles: [],
 })
 export class LeaderboardComponent implements OnInit {
-  users: IPHPer[] = COMMUNITY.PHPers;
+  users = [
+    ...[1, 2, 3, 4].map((i) => {
+      return {
+        name: "John Doe",
+        avatar: `https://i.pravatar.cc/300?id=${i}`,
+        bio: "John Doe is a cool guy",
+        rank: 1,
+        points: 100,
+        links: {
+          github: "https://github.com/rabraghib",
+        },
+      };
+    }),
+  ];
 
   constructor() {}
 

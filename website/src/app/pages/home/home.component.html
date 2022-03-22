@@ -1,4 +1,4 @@
-<header class="text-center py-14 md:py-16 mb-5">
+<header class="text-center py-14 md:py-16 mb-5" *ngIf="about$ | async as about">
   <h1
     class="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-none tracking-tight mb-6 lg:px-5 dark:text-white"
   >
@@ -8,7 +8,7 @@
   </h1>
   <div class="max-w-4xl lg:max-w-6xl mx-auto">
     <p class="mb-10 text-xl text-gray-600 dark:text-gray-400">
-      {{ description }}
+      {{ about.description }}
     </p>
     <div class="flex flex-wrap justify-center gap-4">
       <app-button variant="secondary" routerLink="/about">About us</app-button>
@@ -37,7 +37,7 @@
   <div class="text-center grid gap-4 md:grid-cols-2 xl:grid-cols-3">
     <app-challenge-card
       [challenge]="challenge"
-      *ngFor="let challenge of challenges"
+      *ngFor="let challenge of challenges$ | async"
     ></app-challenge-card>
   </div>
 </app-section>
@@ -55,7 +55,7 @@
   <div class="grid gap-4 xl:grid-cols-2">
     <app-user-card
       class="max-w-2xl mx-auto"
-      *ngFor="let moderator of moderators"
+      *ngFor="let moderator of moderators$ | async"
       [user]="moderator"
     ></app-user-card>
   </div>

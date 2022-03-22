@@ -1,5 +1,4 @@
-import { Component, HostBinding, OnInit } from "@angular/core";
-import { COMMUNITY } from "../core/data";
+import { Component, HostBinding, Input, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-footer",
@@ -7,7 +6,7 @@ import { COMMUNITY } from "../core/data";
   styles: [],
 })
 export class FooterComponent implements OnInit {
-  socialLinks = COMMUNITY.links;
+  @Input("links") socialLinks: any;
   @HostBinding("class") HostClasses =
     "block p-4 bg-white sm:p-6 dark:bg-gray-800";
 

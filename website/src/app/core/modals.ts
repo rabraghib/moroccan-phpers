@@ -1,23 +1,15 @@
-export interface ICommunity {
+export interface IAbout {
   name: string;
   description: string;
-  PHPers: IPHPer[];
-  links: ISocialLink[];
-  challenges: IChallenge[];
-  moderators: IUser[];
+  links: ILinks;
 }
 
-export interface IUser {
+export interface IModerator {
   name: string;
   avatar: string;
   bio?: string;
-  links: ISocialLink[];
+  links: ILinks;
 }
-
-export type IPHPer = IUser & {
-  rank: number;
-  points: number;
-};
 
 export interface ISocialLink {
   name: string;
@@ -25,35 +17,11 @@ export interface ISocialLink {
   icon: string;
 }
 
-export type IChallenge = ISingleChallenge | IPeriodicChallenge;
-
-export type ISingleChallenge = IChallengeBase & IEdition;
-export type IPeriodicChallenge = IChallengeBase & {
-  next?: IAnnouncement;
-  editions: IEdition[];
-};
-
-export interface IAnnouncement {
-  title: string;
-  description: string;
-  date: string;
-}
-
-export interface IEdition {
-  date: string;
-  duration: string;
-  description: string;
-  solutions: ISolution[];
-}
-
-export interface ISolution {
-  author: IUser;
-  url: string;
-}
-
-interface IChallengeBase {
-  name: string;
-  icon: string;
-  slug: string;
-  summary: string;
+export interface ILinks {
+  facebook?: string;
+  github?: string;
+  instagram?: string;
+  linkedin?: string;
+  twitter?: string;
+  extra?: ISocialLink[];
 }

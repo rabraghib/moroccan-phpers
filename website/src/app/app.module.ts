@@ -19,6 +19,7 @@ import { LeaderboardComponent } from "./leaderboard/leaderboard.component";
 import { AboutComponent } from "./pages/about/about.component";
 import { NotFoundComponent } from "./pages/not-found/not-found.component";
 import { ChallengeComponent } from "./pages/challenge/challenge.component";
+import { SocialLinksPipe } from "./core/pipes/social-links.pipe";
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ChallengeComponent } from "./pages/challenge/challenge.component";
     AboutComponent,
     NotFoundComponent,
     ChallengeComponent,
+    SocialLinksPipe,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, HostBinding, Input, OnInit } from "@angular/core";
-import { ISocialLink } from "@app/core/modals";
+import { ILinks } from "@app/core/modals";
 
 @Component({
   selector: "app-social-links",
@@ -7,7 +7,7 @@ import { ISocialLink } from "@app/core/modals";
   styles: [],
 })
 export class SocialLinksComponent implements OnInit {
-  @Input() links: ISocialLink[] = [];
+  @Input() links: ILinks = {};
   @HostBinding("class") hostClasses = "flex space-x-4";
 
   constructor() {}
