@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
 import { IAbout, IModerator } from "@app/core/modals";
-import { map, Observable } from "rxjs";
+import { from, Observable } from "rxjs";
 import { IChallengesMap, pressOuts } from "@ngaox/press";
 import { HttpClient } from "@angular/common/http";
+import about from "@app/core/data/about";
 
 @Component({
   selector: "app-home",
@@ -11,18 +11,17 @@ import { HttpClient } from "@angular/common/http";
   styles: [``],
 })
 export class HomeComponent implements OnInit {
-  about$?: Observable<IAbout>;
+  about = about;
   challenges$?: Observable<IChallengesMap>;
-  moderators$?: Observable<IModerator[]>;
+  moderators$?: Observable<IModerator[]> = from(
+    import(`@app/core/data/moderators`).then((m) => m.default)
+  );
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {
-    this.about$ = this.route.data.pipe(map((data) => data["about"]));
-  }
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
     this.challenges$ = this.http.get<IChallengesMap>(
       `/${pressOuts.dir}/${pressOuts.map}`
     );
-    this.moderators$ = this.http.get<IModerator[]>(`/assets/moderators.json`);
   }
 }
