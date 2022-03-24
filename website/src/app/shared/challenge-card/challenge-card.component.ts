@@ -27,4 +27,8 @@ export class ChallengeCardComponent implements OnInit {
     }
     return ch as IPeriodicChallenge;
   }
+
+  editionsNum(ch: IPeriodicChallenge) {
+    return Object.keys(ch.editions ?? {}).length;
+  }
 }

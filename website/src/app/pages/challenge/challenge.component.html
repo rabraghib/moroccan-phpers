@@ -1,8 +1,10 @@
 <ng-container *ngIf="challenge$ | async as challenge">
-  {{ challenge | json }}
+  <!-- {{ challenge | json }} -->
   <app-hr></app-hr>
 
-  <main class="grid lg:grid-cols-[20rem,1fr] xl::grid-cols-[30rem,1fr] gap-4">
+  <main
+    class="grid lg:grid-cols-[20rem,1fr] xl::grid-cols-[30rem,1fr] gap-4 lg:gap-6"
+  >
     <aside
       class="lg:sticky top-20 h-fit bg-white dark:bg-gray-800 text-center lg:text-left"
     >
@@ -18,7 +20,7 @@
         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mt-4 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
         [routerLink]="['/join', challenge.slug]"
       >
-        Join the next challenge
+        Join the next edition
       </button>
 
       <app-hr></app-hr>
@@ -26,7 +28,7 @@
 
     <article
       class="prose lg:prose-lg max-w-full dark:prose-invert"
-      [innerHtml]="body$ | async"
+      [innerHtml]="(edition$ | async)?.body ?? ''"
     ></article>
   </main>
 </ng-container>

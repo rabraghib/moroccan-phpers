@@ -17,7 +17,7 @@ const routes: Routes = [
     path: "challenges/:slug",
     component: ChallengeComponent,
     resolve: {
-      challenge: ChallengeResolver,
+      challengeData: ChallengeResolver,
     },
   },
   { path: "about", component: AboutComponent },

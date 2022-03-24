@@ -17,8 +17,8 @@
     "@angular/platform-browser": "~13.2.4",
     "@angular/platform-browser-dynamic": "~13.2.4",
     "@angular/router": "~13.2.4",
-    "@ngaox/icons": "^3.1.2",
-    "@ngaox/press": "^3.5.3",
+    "@ngaox/icons": "^3.5.4",
+    "@ngaox/press": "^3.5.4",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -26,7 +26,7 @@
   "devDependencies": {
     "@angular/cli": "~13.2.5",
     "@angular/compiler-cli": "~13.2.4",
-    "@ngaox/devkit": "^3.5.3",
+    "@ngaox/devkit": "^3.5.4",
     "@tailwindcss/typography": "^0.5.2",
     "@types/node": "^12.11.1",
     "autoprefixer": "^10.4.4",

@@ -1299,10 +1299,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@ngaox/devkit@^3.5.3":
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/@ngaox/devkit/-/devkit-3.5.3.tgz#ee57e873e70c48ba3193824589984ab143ef53e3"
-  integrity sha512-4x+n5YLVfSfx4X9WUAst5VsM9r2kKbjUtDPnD3VsWmw9vG8HOG5WgslD9ltiMJbb3DRkFJXn3hU0ikybUlVGrw==
+"@ngaox/devkit@^3.5.4":
+  version "3.5.4"
+  resolved "https://registry.yarnpkg.com/@ngaox/devkit/-/devkit-3.5.4.tgz#d49217674351450e5809d444704e6e4c08ca3f11"
+  integrity sha512-5bKw/XazuWXyWvP66ijRCwxq/ag8N+Fgv5kDEOUqMGn9XRv0I/y8XCZlF6og/JZ5rnK5zV3SxEtajbriXRE1MA==
   dependencies:
     "@angular-devkit/build-angular" "^13.0.0"
     "@angular-devkit/schematics" "^13.0.0"
@@ -1317,17 +1317,17 @@
     prismjs "^1.25.0"
     rxjs "^7.5.4"
 
-"@ngaox/icons@^3.1.2":
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/@ngaox/icons/-/icons-3.5.1.tgz#53089d747ca9f37645022a9484715dcd5af40ad7"
-  integrity sha512-eTzdMXSFGlHOkrzN46Qt+Z01J1QfV1zc2mGOuR6qwip7hIwcO/1z3f5yuMIMNM+5xCR1LZ5LNJ7Cyjpit3r4qA==
+"@ngaox/icons@^3.5.4":
+  version "3.5.4"
+  resolved "https://registry.yarnpkg.com/@ngaox/icons/-/icons-3.5.4.tgz#646112733fbee31967a9814de8ee72e3ab4d7ad0"
+  integrity sha512-lxsXSFrGdGu0ZNVQsWOdKB8No7xJ8Z1Q5yN2ckHII7zuGMX/5IwTVGXZBSem5lO+RfiQp+kIMIR215XVwfj9YQ==
   dependencies:
     tslib "^2.3.0"
 
-"@ngaox/press@^3.5.3":
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/@ngaox/press/-/press-3.5.3.tgz#6e10114b1191d50c45bb2004362fb40cb05508b6"
-  integrity sha512-kPD2ffB3x5OA4FejNG3AC/GcufQD355v74uZS04vBBJW7mf9T5Hurqfa09kd0PvujjLUO1vKHxvDFVkcN0IBCg==
+"@ngaox/press@^3.5.4":
+  version "3.5.4"
+  resolved "https://registry.yarnpkg.com/@ngaox/press/-/press-3.5.4.tgz#e3398aede12c155c1f7f7cbecf961996369a7f28"
+  integrity sha512-/6rSs3JdFhlTVbuf81MQtaLCKS1QxWV0h+fjFEQZPyb+mILu2MxAH6wR0MIi3RrQLLZoonSOw4SZWj1bmwM0KA==
   dependencies:
     tslib "^2.3.0"
 

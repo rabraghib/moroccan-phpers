@@ -1,8 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { IChallenge, ISingleChallenge } from "@ngaox/press";
+import { IChallenge, ISingleChallenge, IEdition } from "@ngaox/press";
 import { map, Observable } from "rxjs";
-import { omitKeys } from "@ngaox/devkit/src/utils/omit-keys";
 
 @Component({
   selector: "app-challenge",
@@ -11,7 +10,7 @@ import { omitKeys } from "@ngaox/devkit/src/utils/omit-keys";
 })
 export class ChallengeComponent implements OnInit {
   challenge$?: Observable<IChallenge>;
-  body$?: Observable<string | undefined>;
+  edition$?: Observable<IEdition>;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -20,9 +19,12 @@ export class ChallengeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.challenge$ = this.route.data.pipe(
-      map((data) => omitKeys(data["challenge"], ["body"]) as IChallenge)
+    const data$ = this.route.data.pipe(map((data) => data["challengeData"]));
+    this.challenge$ = data$.pipe(map((data) => data.challenge));
+    this.edition$ = data$.pipe(
+      map((data) => {
+        return (data?.edition ?? data.challenge) as IEdition;
+      })
     );
-    this.body$ = this.route.data.pipe(map((data) => data["challenge"]?.body));
   }
 }

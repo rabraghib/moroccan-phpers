@@ -31,7 +31,7 @@
       <span
         class="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded"
       >
-        {{ (challenge.metadata["editionsNum"] ?? 0) + 1 }}th Edition
+        {{ editionsNum(challenge) + 1 }}th Edition
         {{
           challenge.next?.date ? "on " + (challenge.next?.date | date) : "soon"
         }}
