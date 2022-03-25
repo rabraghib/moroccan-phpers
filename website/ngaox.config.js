@@ -17,7 +17,11 @@ module.exports = {
   },
   ngBuild: {
     inlineStyleLanguage: "scss",
-    assets: ["website/src/favicon.ico", "website/src/assets"],
+    assets: [
+      "website/src/favicon.ico",
+      "website/src/assets",
+      "website/src/robots.txt",
+    ],
     styles: [
       "./node_modules/prismjs/themes/prism-okaidia.css",
       "website/src/styles.scss",
