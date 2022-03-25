@@ -28,12 +28,20 @@
         class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-1 text-left"
         *ngIf="edition$ | async as edition"
       >
+        <app-meta-item *ngIf="edition.metadata['review_url']" icon="youtube">
+          <a
+            class="font-medium text-blue-700 dark:text-blue-300"
+            target="_blank"
+            [href]="edition.metadata['review_url']"
+            >Watch Review</a
+          >
+        </app-meta-item>
         <app-meta-item icon="clock"
           >Estimated: {{ edition.duration }}</app-meta-item
         >
         <app-meta-item icon="check-circle">
           <a
-            class="font-medium text-blue-700 dark:text-blue-300 cursor-pointer"
+            class="font-medium text-blue-700 dark:text-blue-300"
             [href]="
               'https://github.com/rabraghib/moroccan-phpers/tree/main/content/submissions/' +
               challenge.slug +
