@@ -38,7 +38,7 @@
               'https://github.com/rabraghib/moroccan-phpers/tree/main/content/submissions/' +
               challenge.slug +
               '/' +
-              (editionSlug$ | async)
+              ((editionSlug$ | async) ?? '')
             "
             target="_blank"
           >
