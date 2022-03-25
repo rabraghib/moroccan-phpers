@@ -16,6 +16,7 @@ const routes: Routes = [
   {
     path: "challenges/:slug",
     component: ChallengeComponent,
+    runGuardsAndResolvers: "paramsOrQueryParamsChange",
     resolve: {
       challengeData: ChallengeResolver,
     },

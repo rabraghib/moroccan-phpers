@@ -38,7 +38,7 @@
       "projectType": "application",
       "root": "website",
       "sourceRoot": "website/src",
-      "prefix": "website/app",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@ngaox/devkit:builder",

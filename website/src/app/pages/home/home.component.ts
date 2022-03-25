@@ -1,9 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { IAbout, IModerator } from "@app/core/modals";
-import { from, Observable } from "rxjs";
+import { IModerator } from "@app/core/modals";
+import { from, map, Observable } from "rxjs";
 import { IChallengesMap, pressOuts } from "@ngaox/press";
 import { HttpClient } from "@angular/common/http";
 import about from "@app/core/data/about";
+import { sortChallenges } from "@app/core/data/helpers";
 
 @Component({
   selector: "app-home",
@@ -20,8 +21,8 @@ export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.challenges$ = this.http.get<IChallengesMap>(
-      `/${pressOuts.dir}/${pressOuts.map}`
-    );
+    this.challenges$ = this.http
+      .get<IChallengesMap>(`/${pressOuts.dir}/${pressOuts.map}`)
+      .pipe(map(sortChallenges));
   }
 }

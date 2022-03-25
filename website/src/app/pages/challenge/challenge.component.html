@@ -1,29 +1,80 @@
 <ng-container *ngIf="challenge$ | async as challenge">
-  <!-- {{ challenge | json }} -->
-  <app-hr></app-hr>
-
   <main
-    class="grid lg:grid-cols-[20rem,1fr] xl::grid-cols-[30rem,1fr] gap-4 lg:gap-6"
+    class="grid lg:grid-cols-[20rem,1fr] xl::grid-cols-[30rem,1fr] gap-4 lg:gap-6 pt-8"
   >
     <aside
-      class="lg:sticky top-20 h-fit bg-white dark:bg-gray-800 text-center lg:text-left"
+      class="lg:sticky top-24 h-fit bg-white dark:bg-gray-800 text-center lg:text-left"
     >
       <h1 class="text-2xl font-bold leading-tight mb-4 dark:text-white">
         {{ challenge.name }}
       </h1>
+
       <p class="text-gray-700 dark:text-gray-400">
         {{ challenge.summary }}
       </p>
 
       <button
         *ngIf="$any(challenge).next !== undefined"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mt-4 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        [routerLink]="['/join', challenge.slug]"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 my-4 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        [routerLink]="['/join']"
+        [queryParams]="{ challenge: challenge.slug }"
       >
         Join the next edition
       </button>
 
-      <app-hr></app-hr>
+      <app-hr class="my-4 lg:my-4"></app-hr>
+
+      <ul
+        class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 gap-1 text-left"
+        *ngIf="edition$ | async as edition"
+      >
+        <app-meta-item icon="clock"
+          >Estimated: {{ edition.duration }}</app-meta-item
+        >
+        <app-meta-item icon="check-circle">
+          <a
+            class="font-medium text-blue-700 dark:text-blue-300 cursor-pointer"
+            [href]="
+              'https://github.com/rabraghib/moroccan-phpers/tree/main/content/submissions/' +
+              challenge.slug +
+              '/' +
+              (editionSlug$ | async)
+            "
+            target="_blank"
+          >
+            {{ edition.submissions?.length ?? 0 }} Submission
+          </a>
+        </app-meta-item>
+        <app-meta-item icon="calender"
+          >Featured-On: {{ edition.date | date }}</app-meta-item
+        >
+      </ul>
+
+      <ng-container *ngIf="$any(challenge)?.editions">
+        <app-hr class="my-4 lg:my-4"></app-hr>
+
+        <h2 class="text-xl font-bold leading-tight mb-4 dark:text-white">
+          Past Editions
+        </h2>
+
+        <ul class="grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1">
+          <li
+            *ngFor="let edition of editions$ | async"
+            class="flex items-center"
+          >
+            <a
+              routerLinkActive="!text-green-700 dark:!text-green-300"
+              class="text-blue-700 hover:text-blue-800 dark:text-blue-300 dark:hover:text-blue-200 focus:ring-4 focus:ring-blue-300 font-medium"
+              [routerLink]="['/challenges', challenge.slug]"
+              [queryParams]="{ edition: edition.slug }"
+            >
+              {{ edition.date | date }} - {{ edition.slug }}
+            </a>
+          </li>
+        </ul>
+      </ng-container>
+
+      <app-hr class="my-4 lg:my-4"></app-hr>
     </aside>
 
     <article

@@ -8,6 +8,7 @@ import {
 } from "@angular/router";
 import { IChallenge, IEdition, pressOuts } from "@ngaox/press";
 import { map, mergeMap, Observable, of } from "rxjs";
+import { getLatestEditionSlug } from "../data/helpers";
 
 interface IChallengeData {
   challenge: IChallenge;
@@ -39,17 +40,7 @@ export class ChallengeResolver implements Resolve<IChallengeData> {
               })
             );
           } else {
-            challenge.editions = challenge.editions ?? {};
-            const latestEdition = Object.keys(challenge.editions).reduce(
-              (a, b) => {
-                console.log(a, b);
-                return new Date((challenge.editions ?? {})[a]) >
-                  new Date((challenge.editions ?? {})[b])
-                  ? a
-                  : b;
-              },
-              ""
-            );
+            const latestEdition = getLatestEditionSlug(challenge);
             this.router.navigate(["/challenges", route.params["slug"]], {
               queryParams: {
                 edition: latestEdition,
