@@ -39,7 +39,7 @@
         <app-meta-item icon="clock"
           >Estimated: {{ edition.duration }}</app-meta-item
         >
-        <app-meta-item icon="check-circle">
+        <app-meta-item icon="paper-plane">
           <a
             class="font-medium text-blue-700 dark:text-blue-300"
             [href]="
@@ -86,7 +86,7 @@
     </aside>
 
     <article
-      class="prose lg:prose-lg max-w-full dark:prose-invert"
+      class="prose lg:prose-lg max-w-full overflow-hidden dark:prose-invert"
       [innerHtml]="(edition$ | async)?.body ?? ''"
     ></article>
   </main>
