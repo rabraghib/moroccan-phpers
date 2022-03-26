@@ -1,12 +1,21 @@
 # Mail microservice
 
-### Name 
-> OUTAMA Othmane 
+---
+
+**Find full implementation at: <https://github.com/moroccan-phpers/challenges/tree/master/february-2022/Solution%203>**
+
+---
+
+### Name
+
+> OUTAMA Othmane
 
 ### Email
+
 > outama.othmane@gmail.com
 
 ### Description
+
 > This is a microservice to handle "email sending" using third party mail services.
 > Built using Laravel (PHP Framework)
 
