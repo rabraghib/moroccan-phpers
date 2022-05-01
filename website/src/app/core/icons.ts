@@ -2,34 +2,6 @@ import { INgaoxIcon } from "@ngaox/icons";
 
 export const APP_ICONS: INgaoxIcon[] = [
   {
-    name: "moroccan-phpers",
-    data: {
-      lazy: true,
-      url: "/assets/moroccan-phpers.svg",
-    },
-  },
-  {
-    name: "power-first",
-    data: {
-      lazy: true,
-      url: "/assets/icons/power-first.svg",
-    },
-  },
-  {
-    name: "test-tube",
-    data: {
-      lazy: true,
-      url: "/assets/icons/test-tube.svg",
-    },
-  },
-  {
-    name: "parse-file",
-    data: {
-      lazy: true,
-      url: "/assets/icons/parse-file.svg",
-    },
-  },
-  {
     name: "youtube",
     data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 461.001 461.001" fill="currentColor">
@@ -65,22 +37,6 @@ export const APP_ICONS: INgaoxIcon[] = [
     data: `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
         <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
-      </svg>
-    `,
-  },
-  {
-    name: "theme-toggle-dark-icon",
-    data: `
-      <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" >
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
-      </svg>
-    `,
-  },
-  {
-    name: "theme-toggle-light-icon",
-    data: `
-      <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
       </svg>
     `,
   },

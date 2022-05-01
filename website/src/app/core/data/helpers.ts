@@ -1,6 +1,6 @@
-import { IChallenge, IPeriodicChallenge } from "@ngaox/press";
+import { IContest, IPeriodicContest } from "@ngaox/press";
 
-export function sortChallenges(challenges: IChallenge[]): IChallenge[] {
+export function sortChallenges(challenges: IContest[]): IContest[] {
   return challenges.sort((a, b) => {
     const aDate = new Date(
       "date" in a ? a.date : (a?.editions ?? {})[getLatestEditionSlug(a)]
@@ -12,7 +12,7 @@ export function sortChallenges(challenges: IChallenge[]): IChallenge[] {
   });
 }
 
-export function getLatestEditionSlug(challenge: IPeriodicChallenge) {
+export function getLatestEditionSlug(challenge: IPeriodicContest) {
   challenge.editions = challenge?.editions ?? {};
   return Object.keys(challenge?.editions).reduce((a, b) => {
     return new Date((challenge.editions ?? {})[a]) >

@@ -2,9 +2,9 @@ import { DOCUMENT } from "@angular/common";
 import { Component, Inject, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import {
+  IContest,
+  IUniqueContest,
   IChallenge,
-  ISingleChallenge,
-  IEdition,
   ISubmission,
 } from "@ngaox/press";
 import { map, Observable } from "rxjs";
@@ -15,8 +15,8 @@ import { map, Observable } from "rxjs";
   styles: [],
 })
 export class ChallengeComponent implements OnInit {
-  challenge$?: Observable<IChallenge>;
-  edition$?: Observable<IEdition>;
+  challenge$?: Observable<IContest>;
+  edition$?: Observable<IChallenge>;
   editions$?: Observable<
     {
       slug: string;
@@ -32,8 +32,8 @@ export class ChallengeComponent implements OnInit {
     this.editionSlug$ = route.queryParams.pipe(map((data) => data["edition"]));
   }
 
-  toSingle(ch: IChallenge) {
-    return ch as ISingleChallenge;
+  toSingle(ch: IContest) {
+    return ch as IUniqueContest;
   }
 
   ensureNotEmpty(submissions?: ISubmission[]) {
@@ -59,7 +59,7 @@ export class ChallengeComponent implements OnInit {
     );
     this.edition$ = data$.pipe(
       map((data) => {
-        return (data?.edition ?? data.challenge) as IEdition;
+        return (data?.edition ?? data.challenge) as IChallenge;
       })
     );
   }

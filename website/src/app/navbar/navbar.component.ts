@@ -25,8 +25,8 @@ export class NavbarComponent implements OnInit {
 
   get modeToggleIcon() {
     return this.themeService.$isDark.value
-      ? "theme-toggle-dark-icon"
-      : "theme-toggle-light-icon";
+      ? "app:theme-toggle-dark-icon"
+      : "app:theme-toggle-light-icon";
   }
 
   constructor(private themeService: ThemeService) {}

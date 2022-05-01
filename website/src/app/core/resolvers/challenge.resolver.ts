@@ -6,13 +6,13 @@ import {
   ActivatedRouteSnapshot,
   Router,
 } from "@angular/router";
-import { IChallenge, IEdition, pressOuts } from "@ngaox/press";
+import { IContest, IChallenge } from "@ngaox/press";
 import { map, mergeMap, Observable, of } from "rxjs";
 import { getLatestEditionSlug } from "../data/helpers";
 
 interface IChallengeData {
-  challenge: IChallenge;
-  edition?: IEdition;
+  challenge: IContest;
+  edition?: IChallenge;
 }
 
 @Injectable({
@@ -25,10 +25,10 @@ export class ChallengeResolver implements Resolve<IChallengeData> {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<IChallengeData> {
-    const fullSlug = `/${pressOuts.dir}/${route.params["slug"]}`;
+    const fullSlug = `/~content/${route.params["slug"]}`;
     const edition = route.queryParamMap.get(`edition`);
-    return this.http.get<IChallenge>(`${fullSlug}.json`).pipe(
-      mergeMap((challenge: IChallenge) => {
+    return this.http.get<IContest>(`${fullSlug}.json`).pipe(
+      mergeMap((challenge: IContest) => {
         if ("editions" in challenge) {
           if (edition && edition in (challenge?.editions ?? {})) {
             return this.http.get(`${fullSlug}/${edition}.json`).pipe(

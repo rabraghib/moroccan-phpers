@@ -1,6 +1,6 @@
 ---
 name: PHP Code tester
-icon: test-tube
+icon: app:challenges:test-tube
 summary: Design the architecture of the code testing part of a challenges platform
 date: "2020-01-01"
 duration: 1 to 2 hours

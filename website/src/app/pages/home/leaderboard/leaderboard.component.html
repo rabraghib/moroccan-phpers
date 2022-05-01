@@ -18,9 +18,6 @@
           >
             Info
           </th>
-          <th scope="col" class="hidden md:table-cell p-4 w-1/12">
-            <span class="sr-only">Social Links</span>
-          </th>
           <th
             scope="col"
             class="w-1/12 py-3 px-6 text-xs font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-400"
@@ -32,35 +29,29 @@
       <tbody>
         <tr
           class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-          *ngFor="let user of users"
+          *ngFor="let item of leaderboard; let i = index"
         >
           <td
             class="text-center py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400"
           >
-            #{{ user.rank }}
+            #{{ i + 1 }}
           </td>
           <td
             class="flex items-center gap-4 py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
           >
             <img
               class="w-14 h-14 rounded-full shadow bg-gray-100 dark:bg-gray-700"
-              [src]="user.avatar"
-              alt="{{ user.name }}'s avatar"
+              src="https://avatars.dicebear.com/api/human/{{
+                item.name | hash
+              }}.svg"
+              alt="{{ item.name }}'s avatar"
             />
-            <div class="whitespace-pre-wrap">
-              {{ user.name }} <br />
-              <span class="text-xs text-gray-500 dark:text-gray-400"
-                >{{ user.bio }}
-              </span>
-            </div>
-          </td>
-          <td class="py-4 px-6 hidden md:table-cell">
-            <app-social-links [links]="user.links"></app-social-links>
+            <div class="whitespace-pre-wrap">{{ item.name }} <br /></div>
           </td>
           <td
             class="text-center py-4 px-6 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400"
           >
-            {{ user.points }}
+            {{ item.points }}
           </td>
         </tr>
       </tbody>

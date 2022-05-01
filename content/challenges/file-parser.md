@@ -1,6 +1,6 @@
 ---
 name: File parser
-icon: parse-file
+icon: app:challenges:parse-file
 summary: Review and re-implement a content parsing, of a json or xml file to a php array, solution
 date: "2020-01-01"
 duration: 1 to 2 hours

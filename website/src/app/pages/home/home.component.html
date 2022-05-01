@@ -44,7 +44,7 @@
 
 <app-hr [isVertical]="true"></app-hr>
 
-<app-leaderboard></app-leaderboard>
+<app-leaderboard [leaderboard]="(leaderboard$ | async) ?? []"></app-leaderboard>
 
 <app-hr [isVertical]="true"></app-hr>
 
@@ -52,9 +52,9 @@
   title="Moderators"
   description="All the amazing things provided by Moroccan PHPers would not be possible without the help and passion of this awesome group of developers."
 >
-  <div class="grid gap-4 xl:grid-cols-2">
+  <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2">
     <app-user-card
-      class="max-w-2xl mx-auto"
+      class="w-full max-w-sm md:max-w-2xl mx-auto"
       *ngFor="let moderator of moderators$ | async"
       [user]="moderator"
     ></app-user-card>
