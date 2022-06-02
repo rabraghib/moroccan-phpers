@@ -1,7 +1,7 @@
 export default [
   {
     name: "Rabyâ Raghib",
-    avatar: "https://rabraghib.me/assets/picture.webp",
+    avatar: "https://rabraghib.web.app/assets/picture.webp",
     bio: "Self-taught Angular/Symfony developer with a passion for open source software.",
     links: {
       github: "https://github.com/rabraghib",
